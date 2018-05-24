@@ -9,6 +9,9 @@
 
         {!! Form::label('content', 'レストラン:') !!}
         {!! Form::text('content') !!}
+        
+        {!! Form::label('title', '感想:') !!}
+        {!! Form::text('title') !!}
 
         {!! Form::submit('更新') !!}
 

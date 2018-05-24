@@ -49,10 +49,12 @@ class RestaurantsController extends Controller
         
         $this->validate($request, [
             'content' => 'required|max:191',
+            'title' => 'required|max:191',   // 追加
         ]);
         
         $restaurant = new Restaurant;
         $restaurant->content = $request->content;
+        $restaurant->title = $request->title;    // 追加
         $restaurant->save();
         
         return redirect('/');
@@ -99,10 +101,12 @@ class RestaurantsController extends Controller
     {
         $this->validate($request, [
             'content' => 'required|max:191',
+            'title' => 'required|max:191',   // 追加
         ]);
         
         $restaurant = Restaurant::find($id);
         $restaurant->content = $request->content;
+        $restaurant->title = $request->title;    // 追加
         $restaurant->save();
         
         return redirect('/');

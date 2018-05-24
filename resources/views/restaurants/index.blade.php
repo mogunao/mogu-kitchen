@@ -7,7 +7,7 @@
     @if (count($restaurants) > 0)
         <ul>
             @foreach ($restaurants as $restaurant)
-                <li>{!! link_to_route('restaurants.show', $restaurant->id, ['id' => $restaurant->id]) !!} : {{ $restaurant->content }}</li>
+                <li>{!! link_to_route('restaurants.show', $restaurant->id, ['id' => $restaurant->id]) !!} : {{ $restaurant->content }} > {{ $restaurant->title }}</li>
             @endforeach
         </ul>
     @endif

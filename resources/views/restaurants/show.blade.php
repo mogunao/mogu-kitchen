@@ -4,7 +4,8 @@
 
     <h1>id = {{ $restaurant->id }} のレストラン詳細ページ</h1>
 
-    <p>{{ $restaurant->content }}</p>
+    <p>レストラン: {{ $restaurant->content }}</p>
+    <p>感想: {{ $restaurant->content }}</p>
     
     {!! link_to_route('restaurants.edit', 'このレストランを編集', ['id' => $restaurant->id]) !!}
     
